@@ -111,6 +111,7 @@ jobs:
       phase: ${{ steps.setvars.outputs.phase }}
     steps:
       - name: Set variables
+        if: always()
         id: setvars
         run: |
           echo "phase=feature" >> $GITHUB_OUTPUT
